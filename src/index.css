@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #F2DD72; /* Gray */
+  --accent-color: #D89697; /* Yellow */
+  --font-family: Arial, sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
