@@ -1,17 +1,13 @@
 import './App.css';
+import { ToDoItem } from './components/ToDoItem';
+import ToDoList from './components/ToDoList';
+import { AddTodoForm } from './components/AddTodoForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <ToDoList />
+      <ToDoList />
     </div>
   );
 }
