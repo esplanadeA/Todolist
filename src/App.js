@@ -1,12 +1,25 @@
 import './App.css';
+import React, { useState } from 'react';
 import { ToDoItem } from './components/ToDoItem';
 import ToDoList from './components/ToDoList';
 import { AddTodoForm } from './components/AddTodoForm';
 
 function App() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React' },
+    { id: 2, text: 'Build a Todo App' },
+    { id: 3, text: 'Deploy App to Production' },
+  ]);
+
+  const deleteTodo = (id) => {
+    // Filter out the todo item with the specified ID
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    // Update the state with the new array of todos
+    setTodos(updatedTodos);
+  };
   return (
     <div className="App">
-      <ToDoList />
+      <ToDoList todos={todos} onDelete={deleteTodo} />
       <ToDoItem />
     </div>
   );
