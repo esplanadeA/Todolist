@@ -8,6 +8,7 @@ const TodoList = ({ todos, onDelete }) => {
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.text}
+            {todo.time}
             <button onClick={() => onDelete(todo.id)}>Delete</button>
           </li>
         ))}
