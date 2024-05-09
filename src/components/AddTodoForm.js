@@ -6,8 +6,9 @@ export const AddTodoForm = ({ addTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
-    addTodo({ text, todoTime });
+    addTodo({ text, todoTime: new Date(todoTime) });
     setText('');
+    setToDoTime('');
   };
   return (
     <div>

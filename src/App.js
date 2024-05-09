@@ -25,6 +25,7 @@ function App() {
       time: time,
     };
     setTodos((prevTodos) => [...prevTodos, newTodo]);
+    console.log(todos);
   };
   return (
     <div className="App">
