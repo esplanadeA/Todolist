@@ -17,9 +17,19 @@ function App() {
     // Update the state with the new array of todos
     setTodos(updatedTodos);
   };
+
+  const addTodo = (text) => {
+    const newTodo = {
+      id: Math.random().toString(36).substr(2, 9), // Generate unique ID
+      text: text,
+    };
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+  };
   return (
     <div className="App">
+      <AddTodoForm addTodo={addTodo} />
       <ToDoList todos={todos} onDelete={deleteTodo} />
+
       <ToDoItem />
     </div>
   );

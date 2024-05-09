@@ -1,5 +1,9 @@
 import React from 'react';
 
-export const AddTodoForm = () => {
-  return <div>AddTodoForm</div>;
+export const AddTodoForm = ({ addTodo }) => {
+  return (
+    <div>
+      <button onClick={addTodo}>add new </button>
+    </div>
+  );
 };
