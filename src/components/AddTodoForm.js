@@ -13,9 +13,18 @@ export const AddTodoForm = ({ addTodo }) => {
   };
   return (
     <div>
+      <h1> add new</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Add new todo" value={text} onChange={(e) => setText(e.target.value)} />
-        <input type="datetime-local" value={todoTime} onChange={(e) => setToDoTime(e.target.value)} />
+        <label for="newToDos">New todo</label>
+        <input
+          type="text"
+          id="newTodos"
+          placeholder="Add new todo"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <h2>Finish before</h2>
+        <input type="datetime-local" value={todoTime} onChange={(e) => setToDoTime(e.target.value)} step="1d" />
         <button type="submit">Add</button>
       </form>
     </div>
