@@ -27,10 +27,20 @@ function App() {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
     console.log(todos);
   };
+
+  const editTodo = (id, newText) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, text: newText };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
   return (
     <div className="App">
       <AddTodoForm addTodo={addTodo} />
-      <ToDoList todos={todos} onDelete={deleteTodo} />
+      <ToDoList todos={todos} editTodo={editTodo} onDelete={deleteTodo} />
 
       <ToDoItem />
     </div>
